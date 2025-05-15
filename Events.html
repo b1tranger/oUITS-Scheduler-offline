@@ -3,39 +3,84 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css\button.css"> -->
     <link rel="stylesheet" href="css\styles.css">
-
     <title>Events</title>
+    <link rel="stylesheet" href="css\menu-bar.css">
+    <!-- <link rel="stylesheet" href="css\styles.css"> -->
+    <style>
+        p {
+            /* max-width: 600px; */
+            text-align: center;
+        }
+
+        .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin: auto;
+            width: 95%;
+        }
+
+        .logo-hover:hover {
+            transform: translateY(-3px);
+            transition: width 2s, height 2s, transform 2s;
+            /* border: 1px solid #00000018; */
+            /* border-radius: 50px; */
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- TOP BAR -->
 
-    <div class="topnav-1">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="Semesters.html">Browser Schedules</a></li>
+                <li><a href="https://ouits-res.netlify.app/" target="_blank">See Resources</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
-        <a class="active-1" href="https://ouits-res.netlify.app/" target="_blank">
-            <small>oUITS-Resources</small>
-        </a>
-
+    <div class="logo-container">
+        <div class="logo">
+            <img src="images\logo\logo (5).webp" height="80px" width="80px" style="border-radius: 50px;">
+        </div>
+        <div class="logo-text"></div>
     </div>
-
-
 
     <!-- BOTTOM BAR "navbar" -->
 
-    <div style="padding-left:16px">
+    <!-- <div style="padding-left:16px">
     </div>
     <div class="navbar-5">
         <font size="24"></font>
         <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Scheduler</i></p>
         </font>
 
-    </div>
+    </div> -->
     <!-- ----------------------------------------------------------------------- -->
 
-    <br>
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <br> <br> <br>
+
+    <div class="parent-wrap">
+
+
+
+    </div>
+
+
     <div class="container-5" align=center style="max-width: 500px;">
+
+
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
                 <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">Upcoming Events Schedule
@@ -109,7 +154,7 @@
 
     <!-- BACK BUTTON -->
 
-    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
+    <a href="javascript:history.back()" class="back-icon" style="box-sizing:content-box;">&#8592;</a>
 
 </body>
 

@@ -4,8 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/selector.css"> 
-    <link rel="stylesheet" href="css/drop-down.css">
+    <link rel="stylesheet" href="css\menu-bar.css">
     <title>
         Semesters
     </title>
@@ -14,6 +13,7 @@
             /* max-width: 600px; */
             text-align: center;
         }
+
         /* .parent-wrap {
             display: flex;
             flex-wrap: wrap;
@@ -23,29 +23,46 @@
             width:95%;
         } */
     </style>
-  
+
 </head>
 
 <body>
     <!-- TOP BAR -->
 
-    <div class="topnav-1">
-        <a class="active-1" href="https://ouits-res.netlify.app/" target="_blank">
-            <small>oUITS-Resources</small>
-        </a>
-    </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="#">Semester</a></li>
+                <li><a href="https://ouits-res.netlify.app/" target="_blank">See Resources</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
+    <div class="logo-container">
+        <div class="logo">
+            <img src="images\logo\logo (4).webp" height="80px" width="80px" style="border-radius: 50px;">
+        </div>
+        <div class="logo-text"></div>
+    </div>
 
     <!-- BOTTOM BAR "navbar" -->
 
-    <div style="padding-left:16px">
+    <!-- <div style="padding-left:16px">
     </div>
     <div class="navbar-5">
         <font size="24"></font>
         <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Scheduler</i></p>
         </font>
 
-    </div>
+    </div> -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <br> <br> <br>
 
     <!-- HOME BUTTON -->
 
@@ -60,71 +77,71 @@
 
     <!-- BACK BUTTON -->
 
-    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
+    <a href="javascript:history.back()" class="back-icon" style="box-sizing:content-box;">&#8592;</a>
     <!-- ----------------------------------------------------------------------- -->
-<!-- <a href="tmp.html">Link</a> -->
+    <!-- <a href="tmp.html">Link</a> -->
 
     <!-- <h1 align="center">oUITS-Scheduler</h1> -->
     <!-- <p align="center"><small><i>#</i></small></p> -->
 
-    
+
     <div class="container-5" align=center style="max-width: 500px;">
         <p align="center" style="color: rgba(240, 248, 255, 0.649);margin-bottom: 10px;">Select your
             semester<br><br></p>
         <table class="resources-table-5" align=center style="width:90%;margin-top: -15px;">
             <tr>
                 <td>
-                        <a href="page-depth-02/S01.html" class="cell-link">
-                            1st Semester
-                        </a>
+                    <a href="page-depth-02/S01.html" class="cell-link">
+                        1st Semester
+                    </a>
                 </td>
                 <td>
-                        <a href="page-depth-02/S02.html" class="cell-link">
-                            2nd Semester
-                        </a>
+                    <a href="page-depth-02/S02.html" class="cell-link">
+                        2nd Semester
+                    </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                         <a href="page-depth-02/S03.html" class="cell-link">
-                            3rd Semester
-                        </a>
+                    <a href="page-depth-02/S03.html" class="cell-link">
+                        3rd Semester
+                    </a>
                 </td>
-    
+
                 <td>
-                        <a href="page-depth-02/S04.html" class="cell-link">
-                            4th Semester
-                        </a>
+                    <a href="page-depth-02/S04.html" class="cell-link">
+                        4th Semester
+                    </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                        <a href="page-depth-02/S05.html" class="cell-link">
-                            5th Semester
-                        </a>
+                    <a href="page-depth-02/S05.html" class="cell-link">
+                        5th Semester
+                    </a>
                 </td>
-    
-    
+
+
                 <td>
-                        <a href="page-depth-02/S06.html" class="cell-link">
-                            6th Semester
-                        </a>
+                    <a href="page-depth-02/S06.html" class="cell-link">
+                        6th Semester
+                    </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                        <a href="page-depth-02/S07.html" class="cell-link">
-                            7th Semester
-                        </a>
+                    <a href="page-depth-02/S07.html" class="cell-link">
+                        7th Semester
+                    </a>
                 </td>
-    
+
                 <td>
-                        <a href="page-depth-02/S08.html" class="cell-link">
-                            8th Semester
-                        </a>
+                    <a href="page-depth-02/S08.html" class="cell-link">
+                        8th Semester
+                    </a>
                 </td>
-    
-            <!-- <tr>
+
+                <!-- <tr>
                 <td colspan=2 style="background-color: rgba(240, 248, 255, 0);">
                     <hr><br>
                     <a href="https://drive.google.com/drive/folders/1g93wCOUo4x0qvhNk_HHUb8Ozv_KuSLmL"
@@ -133,260 +150,17 @@
                 </td>
             </tr> -->
         </table>
-    
-       
-        
-<!-- 
-        <div class="semester-selector-container" style="margin-bottom: -30px;margin-top: -25px;">
-            
 
-            <div class="custom-dropdown" id="departmentDropdown">
-                <div class="dropdown-header" id="dropdownHeader">( Click Here )</div>
-
-                <div class="dropdown-list" id="dropdownList">
-                    <div class="dropdown-item" data-value="cse">Computer Science and Engineering</div>
-                   
-                </div>
-            </div>
-
-            <button id="resetButton"><small><b>Clear?</b></small></button>
-
-            <div id="semesterList" class="semester-list"></div>
-            <p id="driveLink"></p>
-        </div> -->
     </div>
 
-    <script>
-        const departmentDropdown = document.getElementById('departmentDropdown');
-        const dropdownHeader = document.getElementById('dropdownHeader');
-        const dropdownList = document.getElementById('dropdownList');
-        const resetButton = document.getElementById('resetButton');
-        const semesterList = document.getElementById('semesterList');
-        const driveLink = document.getElementById('driveLink');
 
-        // Object mapping departments to semester Google Drive folder links
-        const driveLinks = {
-            cse: {
-                1: "page-depth-02/S01.html",
-                2: "page-depth-02/S02.html",
-                3: "page-depth-02/S03.html",
-                4: "page-depth-02/S04.html",
-                5: "page-depth-02/S05.html",
-                6: "page-depth-02/S06.html",
-                7: "page-depth-02/S07.html",
-                8: "page-depth-02/S08.html",
-            }
-            //   ,
-            //   ce: {
-            //     1: "https://drive.google.com/drive/folders/1Q4-tnRaIoLjZenzEZTRs-35OgqV54l9W?usp=drive_link",
-            //     2: "https://drive.google.com/drive/folders/1gAajNJtRo3up6dpnP-R3cTx0trNikJVP?usp=drive_link",
-            //     3: "https://drive.google.com/drive/folders/1XecebUV1rScSMpO0TUbnVoPUWKS8bJAH?usp=drive_link",
-            //     4: "https://drive.google.com/drive/folders/1R3AkpHgDgB2FiHS-gXxPTV7eljZJRknm?usp=drive_link",
-            //     5: "#",
-            //     6: "#",
-            //     7: "#",
-            //     8: "#",
-            //   }
-        };
+    <p align="center"><small>Current goals: <a
+                href="https://play.google.com/store/apps/details?id=com.zohirrayhan.routinescrapper">DIU Routine
+                scrapper</a></small></p>
 
-        // Dropdown toggle functionality
-        dropdownHeader.addEventListener('click', () => {
-            dropdownList.classList.toggle('open');
-        });
+    <br><br><br><br>
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!departmentDropdown.contains(event.target)) {
-                dropdownList.classList.remove('open');
-            }
-        });
-
-        // Dropdown item selection
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', function () {
-                const department = this.getAttribute('data-value');
-                dropdownHeader.textContent = this.textContent;
-                dropdownList.classList.remove('open');
-
-                // Save to session storage
-                sessionStorage.setItem('selectedDepartment', department);
-
-                // Update semesters
-                updateSemesters(department);
-            });
-        });
-
-        // Load previous selection from sessionStorage on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedDepartment = sessionStorage.getItem('selectedDepartment');
-            if (savedDepartment) {
-                const departmentItem = document.querySelector(`.dropdown-item[data-value="${savedDepartment}"]`);
-                if (departmentItem) {
-                    dropdownHeader.textContent = departmentItem.textContent;
-                    updateSemesters(savedDepartment);
-
-                    const savedSemester = sessionStorage.getItem('selectedSemester');
-                    if (savedSemester) {
-                        const semesterButton = document.querySelector(`.semester-button[data-semester="${savedSemester}"]`);
-                        if (semesterButton) {
-                            semesterButton.classList.add('active');
-                        }
-                    }
-                }
-            }
-        });
-
-        // Reset functionality
-        resetButton.addEventListener('click', () => {
-            // Reset dropdown header
-            dropdownHeader.textContent = '( Click Here )';
-
-            // Clear semester list
-            semesterList.innerHTML = "";
-
-            // Clear drive link
-            driveLink.innerHTML = "";
-
-            // Remove from sessionStorage
-            sessionStorage.removeItem('selectedDepartment');
-            sessionStorage.removeItem('selectedSemester');
-        });
-
-        function updateSemesters(department) {
-            // Clear previous semesters and drive link
-            semesterList.innerHTML = "";
-            driveLink.innerHTML = "";
-
-            if (department) {
-                // Create semester buttons
-                for (let i = 1; i <= 8; i++) {
-                    let semesterButton = document.createElement("button");
-                    semesterButton.textContent = `Semester ${i}`;
-                    semesterButton.classList.add('semester-button');
-                    semesterButton.setAttribute('data-semester', i);
-                    semesterButton.onclick = function () {
-                        // Remove active class from all buttons
-                        document.querySelectorAll('.semester-button').forEach(btn => {
-                            btn.classList.remove('active');
-                        });
-
-                        // Add active class to clicked button
-                        this.classList.add('active');
-
-                        // Save selected semester to sessionStorage
-                        sessionStorage.setItem('selectedSemester', i);
-
-                        // Open drive folder
-                        openDriveFolder(department, i);
-                    };
-                    semesterList.appendChild(semesterButton);
-                }
-            }
-        }
-
-        function openDriveFolder(department, semester) {
-            window.location.href = driveLinks[department][semester];
-        }
-    </script>
-
-    <!-- --------------------------------------------------------------------- -->
-    <!-- <div class="container" style="width: 90%;max-width: 500px;">
-        <div class="dropdown-container resources" style="border-radius: 20px;">
-            <div class="dropdown-header2" style="background-color: #1B262C;">
-                <p></p>FAQ
-            </div>
-            <div class="dropdown-content-1">
-                <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-                    # Academic Scheduler<br>
-                <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-                    I recently thought of an effort to organize and record future tasks and events that's available to
-                    the public. Therefore, anyone can view them through the website and reduce the chance of missing out
-                    on them. Moreover, be aware of any new changes before anyone else, and discuss about it instead of
-                    complaining at the last minute.</div>
-                </p>
-                <hr>
-                <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-                    # This is how it's gonna work...<br>
-                <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-                    Anyone can add a schedule using G-form, but only selected volunteers (preferably CRs) can edit the
-                    Excel sheet. Their work will be to delete the completed schedules.
-
-                    I have attached the Excel sheet view as Schedule, the Google Form view for adding new tasks to the
-                    Schedule, and the Website view that links to both the sheet and form. Join me at the Telegram
-                    Channel <a href="https://t.me/oUITS_ORnU" style="color: #0004ff6a;">https://t.me/oUITS_ORnU</a> for the edit access.</div>
-                </p>
-                <hr>
-                <p class="dropdown-item2" style="text-align: left;margin-top: -2px;color: #000000bb;font-size: medium;">
-                    # Conclusion<br>
-                <div class="description" style="margin: 15px;color: #00000082;font-size: small;">
-                    This is purely a crowdsourcing project and therefore, highly dependent on the people using it. Only
-                    those willing to utilize it will benefit from it. It is just the first demo of the idea therefore
-                    Suggestions and Criticisms are highly appreciated.
-                    <br>
-                    This is also intended to be an open-source project, so I appreciate anyone willing to contribute in
-                    any way they want to. For example, you are against the idea of me having admin access over all the
-                    Forms and Sheets, you can provide me the link of your admin access, I'll add them over mine. It
-                    doesn't really matter.
-                </div>
-                </p>
-                
-            </div>
-        </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const dropdownHeaders = document.querySelectorAll('.dropdown-header2');
-
-                // Function to close all dropdowns
-                function closeAllDropdowns() {
-                    dropdownHeaders.forEach(header => {
-                        header.classList.remove('active');
-                        header.nextElementSibling.classList.remove('show');
-                    });
-                }
-
-                // Add click event to each dropdown header
-                dropdownHeaders.forEach(header => {
-                    header.addEventListener('click', function (event) {
-                        event.stopPropagation(); // Prevent clicking from bubbling to document
-
-                        // Get the content element that follows this header
-                        const content = this.nextElementSibling;
-
-                        // If this dropdown is already open, close it
-                        if (this.classList.contains('active')) {
-                            this.classList.remove('active');
-                            content.classList.remove('show');
-                        } else {
-                            // Otherwise, close all dropdowns and open this one
-                            closeAllDropdowns();
-                            this.classList.add('active');
-                            content.classList.add('show');
-                        }
-                    });
-                });
-
-                // Close dropdowns when clicking outside
-                document.addEventListener('click', function () {
-                    closeAllDropdowns();
-                });
-
-                // Prevent clicks inside dropdown content from closing the dropdown
-                const dropdownContents = document.querySelectorAll('.dropdown-content-1');
-                dropdownContents.forEach(content => {
-                    content.addEventListener('click', function (event) {
-                        event.stopPropagation();
-                    });
-                });
-            });
-        </script> -->
-        <!-- --------------------------------------------------------------------- -->
-        <p align="center"><small>Current goals: <a
-                    href="https://play.google.com/store/apps/details?id=com.zohirrayhan.routinescrapper">DIU Routine
-                    scrapper</a></small></p>
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-      <!--  <p style="margin-bottom: 60px;"><a href="https://t.me/oUITS_ORnU/36?comment=60" target="_blank"
+    <!--  <p style="margin-bottom: 60px;"><a href="https://t.me/oUITS_ORnU/36?comment=60" target="_blank"
                 style="color: rgba(0, 0, 0, 0.718);"><i>( Read
                     FAQ )</i></a></p> -->
 

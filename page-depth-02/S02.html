@@ -2,64 +2,87 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css\styles.css">
-  <title>
-    CSE-Files
-  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css\styles.css">
+
+    <title>CSE-Files</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="../css\menu-bar.css">
+    <title>
+        Semesters
+    </title>
+    <style>
+        p {
+            /* max-width: 600px; */
+            text-align: center;
+        }
+
+        /* .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center ;
+            gap: 16px;
+            margin: 5%;
+            width:95%;
+        } */
+    </style>
+
 </head>
 
 <body>
 
-<!-- TOP BAR -->
+    <!-- TOP BAR -->
 
-<div class="topnav-1">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="#">Semester</a></li>
+                <li><a href="https://ouits-res.netlify.app/" target="_blank">See Resources</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
-  <a class="active-1" href="https://ouits-res.netlify.app/" target="_blank">
-      <small>oUITS-Resources</small>
-  </a>
+    <div class="logo-container">
+        <div class="logo">
+            <img src="../images\logo\logo (4).webp" height="80px" width="80px" style="border-radius: 50px;">
+        </div>
+        <div class="logo-text"></div>
+    </div>
 
-</div>
-
-<!-- BOTTOM BAR "navbar" -->
-
-<div style="padding-left:16px">
-</div>
-<div class="navbar-5">
-<font size="24"></font>
-<p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Scheduler</i></p>
-</font>
-
-</div>
-<!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
 
 
-  <br>
-  <div class="container-5" align=center style="max-width: 500px;">
-    <table class="resources-table-5" align=center style="width:90%;">
-        <tr>
-            <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">2nd Semester Schedule</p>
-        </tr>
-        <tr>
-            <td>
-                <!-- <p>  -->
+    <br>
+    <div class="container-5" align=center style="max-width: 500px;margin-top: 200px;">
+        <table class="resources-table-5" align=center style="width:90%;">
+            <tr>
+                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">2nd Semester Schedule
+                </p>
+            </tr>
+            <tr>
+                <td>
+                    <!-- <p>  -->
                     <a href="https://docs.google.com/spreadsheets/d/1-Z4UkYteUF5V4_8wTaVaZvDmULh_LFsVZm-98ul7wbY/edit?usp=sharing"
                         target="_blank" class="cell-link">
                         See Schedule
                     </a>
-                <!-- </p> -->
-            </td>
+                    <!-- </p> -->
+                </td>
 
 
-            <td>
-                <!-- <p>  -->
+                <td>
+                    <!-- <p>  -->
                     <a href="https://forms.gle/31QcKSVwpCQM57yo6" target="_blank" class="cell-link">
                         Add Schedule
                     </a>
-                <!-- </p> -->
-            </td>
-        </tr>
-        <!-- <tr>
+                    <!-- </p> -->
+                </td>
+            </tr>
+            <!-- <tr>
             <td colspan="2">
                 <p> <a href="#"
                         target="_blank">
@@ -68,43 +91,44 @@
             </td>
             
         </tr> -->
-        <tr>
-            <th colspan="2">
-                <p class="highlights" style="color:rgba(255, 255, 255, 0.776);">Course List</p>
-            </th>
-        <tr></tr>
-        <td colspan="2">
-            <div class="container">
+            <tr>
+                <th colspan="2" style="margin-top: 20px;">
+                    <p class="highlights" style="color:rgba(255, 255, 255, 0.776);">Course List</p>
+                </th>
+            <tr></tr>
+            <td colspan="2">
+                <div class="container">
 
-                <div class="img-container" style="height: 200px;">
+                    <div class="img-container" style="height: 200px;">
 
-                    <img src="../images\course-list\S02 Course List.webp" alt="Codeforces Streams Page">
-                    <!-- <div class="scroll-indicator">Scroll down to see more</div> -->
+                        <img src="../images\course-list\S02 Course List.webp" alt="Codeforces Streams Page">
+                        <!-- <div class="scroll-indicator">Scroll down to see more</div> -->
+                    </div>
                 </div>
-            </div>
-        </td>
-        </tr>
-    </table>
-</div>
+            </td>
+            </tr>
+        </table>
+    </div>
 
-  <!-- <div align=center>
+    <!-- <div align=center>
     <p id=" bottom" align=center><a style="color: #8c8c8c;" href="../CSE-Files.html">Go back to CSE-Files</a>
   </div> -->
 
-  <br><br><br><br><br>
+    <br><br><br><br><br>
 
-  <!-- HOME BUTTON -->
+    <!-- HOME BUTTON -->
 
-  <a href="../index.html" class="home-button">
-    <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-    </svg>
-</a>
+    <a href="../index.html" class="home-button">
+        <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+    </a>
 
     <!-- BACK BUTTON -->
 
-    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
-    
+    <a href="javascript:history.back()" class="back-icon" style="box-sizing:content-box;">&#8592;</a>
+
 </body>
 
 </html>

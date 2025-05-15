@@ -6,56 +6,91 @@
     <link rel="stylesheet" href="../css\styles.css">
 
     <title>CSE-Files</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="../css\menu-bar.css">
+    <title>
+        Semesters
+    </title>
+    <style>
+        p {
+            /* max-width: 600px; */
+            text-align: center;
+        }
+
+        /* .parent-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:center ;
+            gap: 16px;
+            margin: 5%;
+            width:95%;
+        } */
+    </style>
 </head>
 
 <body>
 
     <!-- TOP BAR -->
 
-    <div class="topnav-1">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="#">Semester</a></li>
+                <li><a href="https://ouits-res.netlify.app/" target="_blank">See Resources</a></li>
+                <!-- <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
 
-        <a class="active-1" href="https://ouits-res.netlify.app/" target="_blank">
-            <small>oUITS-Resources</small>
-        </a>
-
+    <div class="logo-container">
+        <div class="logo">
+            <img src="../images\logo\logo (4).webp" height="80px" width="80px" style="border-radius: 50px;">
+        </div>
+        <div class="logo-text"></div>
     </div>
-
-
 
     <!-- BOTTOM BAR "navbar" -->
 
-    <div style="padding-left:16px">
+    <!-- <div style="padding-left:16px">
     </div>
     <div class="navbar-5">
         <font size="24"></font>
         <p align=center style="color:rgba(255, 255, 255, 0.776);"><i>oUITS Scheduler</i></p>
         </font>
 
-    </div>
+    </div> -->
+    <!-- ----------------------------------------------------------------------- -->
+
+
+
     <!-- ----------------------------------------------------------------------- -->
 
     <br>
-    <div class="container-5" align=center style="max-width: 500px;">
+    <div class="container-5" align=center style="max-width: 500px;margin-top: 200px;">
         <table class="resources-table-5" align=center style="width:90%;">
             <tr>
-                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">1st Semester Schedule</p>
+                <p class="highlights" align="center" style="color: rgba(240, 248, 255, 0.649);">1st Semester Schedule
+                </p>
             </tr>
             <tr>
                 <td>
                     <!-- <p>  -->
-                        <a href="https://docs.google.com/spreadsheets/d/1guRS7HFQDVCGwHsT7St4_FReIPT8SXS8GTFgjEDcs9Y/edit?usp=sharing"
-                            target="_blank" class="cell-link">
-                            See Schedule
-                        </a>
+                    <a href="https://docs.google.com/spreadsheets/d/1guRS7HFQDVCGwHsT7St4_FReIPT8SXS8GTFgjEDcs9Y/edit?usp=sharing"
+                        target="_blank" class="cell-link">
+                        See Schedule
+                    </a>
                     <!-- </p> -->
                 </td>
 
 
                 <td>
                     <!-- <p>  -->
-                        <a href="https://forms.gle/B3SJcKMAc9ybHLSP6" target="_blank" class="cell-link">
-                            Add Schedule
-                        </a>
+                    <a href="https://forms.gle/B3SJcKMAc9ybHLSP6" target="_blank" class="cell-link">
+                        Add Schedule
+                    </a>
                     <!-- </p> -->
                 </td>
             </tr>
@@ -69,7 +104,7 @@
                 
             </tr> -->
             <tr>
-                <th colspan="2">
+                <th colspan="2" style="margin-top: 20px;">
                     <p class="highlights" style="color:rgba(255, 255, 255, 0.776);">Course List</p>
                 </th>
             <tr></tr>
@@ -107,7 +142,7 @@
 
     <!-- BACK BUTTON -->
 
-    <a href="javascript:history.back()" class="back-icon">&#8592;</a>
+    <a href="javascript:history.back()" class="back-icon" style="box-sizing:content-box;">&#8592;</a>
 
 </body>
 

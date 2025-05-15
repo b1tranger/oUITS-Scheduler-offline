@@ -58,9 +58,9 @@
         /* Logo styling */
         .logo-container {
             position: fixed;
-            top: 4%;
+            top: 0px;
             right: 0px;
-            padding-right: 2%;
+            padding-right: 0px;
             z-index: 1100;
             display: flex;
             align-items: center;
@@ -77,8 +77,13 @@
             font-weight: bold;
             font-size: 24px;
             border-radius: 50%;
+            /* border: 20px solid black; */
+            /* border-width: 10px; */
+            /* border-style: 10px solid black; */
+            /* border-color: #333333; */
             margin-right: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 5px 5px 50px #333333; */
+            border: 50px solid #333333;
         }
 
         .logo-text {
@@ -139,16 +144,18 @@
             }
             
             .logo-container {
-                top: 150px;
-                right: 20px;
+                top: 120px;
+                right: 0px;
                 border-radius: 50px;
-                box-shadow: ;
+                
             }
             
             .logo {
                 width: 60px;
                 height: 60px;
                 font-size: 18px;
+                /* box-shadow: 5px 5px 50px #333333; */
+                border: 50px solid #333333;
             }
             
             .logo-text {
