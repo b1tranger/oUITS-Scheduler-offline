@@ -62,6 +62,10 @@
   zoom: 110%;
 } */
 
+/* HIDE SCROLLBAR */
+::-webkit-scrollbar {
+  display: none;
+}
 
 /* https://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html*/
 
@@ -848,8 +852,11 @@ now Browse Curated Resources*/
   background-color: #333;
   position: fixed;
   bottom: 0;
+  padding-top: 15px;
+ 
   width: 100%;
   z-index: 1000;
+  margin-bottom: -5px;
 }
 
 .navbar-5 a {
