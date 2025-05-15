@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+
+<head>
+    <title>
+        Form Input Page
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* HIDE SCROLLBAR */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.742);
+            max-width: 600px;
+            min-width: 500px;
+        }
+
+        h1,
+        button {
+            color: aliceblue;
+        }
+
+        a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        table {
+            border-radius: 15px 0 15px 0;
+            padding: 2%;
+            border-color: rgba(71, 86, 251, 0.346);
+            box-shadow: black;
+            border-width: 4px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        fieldset {
+            padding: 5%;
+            border-radius: 15px 0 15px 0;
+            border-color: rgb(36, 129, 236);
+            border-width: 7px;
+        }
+
+        td {
+            border: 1px;
+            border-color: rgb(223, 44, 44);
+            text-shadow: black;
+        }
+
+        .div-theme {
+            box-shadow: black;
+        }
+
+        .div-theme2 {
+            border-radius: 5px 15px 15px 15px;
+            box-shadow: black;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(240, 248, 255, 0.238);
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 5px 1px black;
+        }
+
+        .hide-label {
+            color: rgba(255, 255, 255, 0);
+
+        }
+
+        input {
+            border-radius: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"><u>UCAM Registration Form</u></h1>
+
+    <br>
+    <div class="div-theme">
+        <table align="center" border width="85%" style="min-width: 380px;">
+            <tr>
+                <td>
+                    <!-- <form action="fake-output.html"> -->
+                    <form action="form-handler.php" method="post">
+                        <fieldset>
+                            <legend style="text-shadow: 1px 1px black;">Required Information</legend>
+
+                            <p align="center"><i>(Personal Details)</i></p>
+                            <table>
+
+                                <tr>
+                                    <td>
+                                        <label> First Name </label>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp;<input type="text" name="txt1" placeholder=" your first name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Last Name</label>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp;<input type="text" name="txt2" placeholder=" your last name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> User Name</label>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp;<input type="text" name="txt3" placeholder=" your username">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label> Date of Birth</label></td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="birthday"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <label> Select your Gender</label>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="rb1" value="Male">Male
+                                        <input type="radio" name="rb1" value="Female">Female
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Attach Photo</label>
+
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <input class="hide-label" type="file">
+
+                                    </td>
+                                </tr>
+
+                            </table>
+                            <p align="center"><i>(Other Details)</i></p>
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        Student ID
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        <input type="text" name="txt6" placeholder=" your student ID">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label> Select Your Department</label>
+                                    </td>
+                                    <td>
+                                        : &nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <div
+                                            style="border: 2px solid;border-color: rgb(0, 0, 0);border-radius: 5px 5px 5px 5px;">
+                                            <input type="radio" name="dept" value="CSE">CSE
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <br>
+                                            <input type="radio" name="dept" value="LAW">LAW
+                                            <br>
+                                            <input type="radio" name="dept" value="IT">IT
+                                            <br>
+                                            <input type="radio" name="dept" value="CE">CE
+                                            <br>
+                                            <input type="radio" name="dept" value="ECE">ECE
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p align="center"><i>(Security)</i></p>
+                            <table>
+                                <tr>
+                                    <td style="padding-left: 1%;">
+                                        <label> Password </label>
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp; <input type="password" name="txt4"
+                                            placeholder=" set a strong password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-left: 1%;">
+                                        <label> Confirm <br> Password </label>&nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td>
+                                        &nbsp;&nbsp; <input type="password" name="txt5"
+                                            placeholder=" re-enter the password">
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <table>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input class="div-theme2" type="Submit" value="Submit" name="btn1">
+
+                                        &nbsp;&nbsp;&nbsp;<input class="div-theme2" type="reset" value="Reset"
+                                            name="btn2">
+
+                                        &nbsp;&nbsp;&nbsp;
+                                        <a href="javascript:history.back()" class="back-icon"
+                                            style="box-sizing:content-box;"><input class="div-theme2" type="button"
+                                                value="Cancel" name="btn2"></a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            </strong>
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
