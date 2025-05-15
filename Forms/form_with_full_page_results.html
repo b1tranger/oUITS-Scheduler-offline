@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Full Page Results</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4c9aff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(76, 154, 255, 0.2);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        button {
+            background-color: #4c9aff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3a8be2;
+        }
+        
+        /* Results page styles */
+        .results-container {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .back-btn {
+            background-color: #f1f1f1;
+            color: #333;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: auto;
+        }
+        
+        .back-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .results-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .result-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        
+        .result-value {
+            font-size: 18px;
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .results-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Information</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="">-- Select a Subject --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing Question</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-sms" name="contact-method" value="sms">
+                    <label for="contact-sms">SMS</label>
+                </div>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <div class="results-container" id="resultsContainer">
+        <div class="results-header">
+            <h1>Form Submission Results</h1>
+            <button class="back-btn" id="backButton">Back to Form</button>
+        </div>
+        
+        <div class="results-content" id="resultsContent">
+            <!-- Results will be inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const resultsContent = document.getElementById('resultsContent');
+            const backButton = document.getElementById('backButton');
+            
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // Clear previous results
+                resultsContent.innerHTML = '';
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                
+                // Create results display
+                const fields = [
+                    { id: 'name', label: 'Full Name' },
+                    { id: 'email', label: 'Email Address' },
+                    { id: 'phone', label: 'Phone Number' },
+                    { id: 'subject', label: 'Subject' },
+                    { id: 'message', label: 'Message' }
+                ];
+                
+                // Process each field
+                fields.forEach(field => {
+                    const value = document.getElementById(field.id).value;
+                    if (value) {
+                        addResultItem(field.label, value);
+                    }
+                });
+                
+                // Process checkboxes for contact methods
+                const contactMethods = [];
+                document.querySelectorAll('input[name="contact-method"]:checked').forEach(checkbox => {
+                    contactMethods.push(checkbox.value);
+                });
+                
+                if (contactMethods.length > 0) {
+                    addResultItem('Preferred Contact Methods', contactMethods.join(', '));
+                }
+                
+                // Show the results container
+                resultsContainer.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling of background
+            });
+            
+            backButton.addEventListener('click', function() {
+                resultsContainer.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            });
+            
+            // Helper function to add a result item
+            function addResultItem(label, value) {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+                
+                const resultLabel = document.createElement('div');
+                resultLabel.className = 'result-label';
+                resultLabel.textContent = label;
+                
+                const resultValue = document.createElement('div');
+                resultValue.className = 'result-value';
+                resultValue.textContent = value;
+                
+                resultItem.appendChild(resultLabel);
+                resultItem.appendChild(resultValue);
+                resultsContent.appendChild(resultItem);
+            }
+        });
+    </script>
+</body>
+</html>
