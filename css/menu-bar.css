@@ -118,16 +118,15 @@
 
       .bottom-logo {
           display: flex;
-          flex-direction: column;
+          flex-direction: column-reverse;
           justify-content: flex-end;
           align-items: center;
-          height: 100%;
           z-index: 1000px;
+          
+          
       }
 
-      .navbar-5 {
-          display: none;
-      }
+    
 
       .nav-container {
           flex-direction: column;
