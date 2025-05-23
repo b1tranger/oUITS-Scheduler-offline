@@ -1,0 +1,125 @@
+// Create results display
+                const fields = [
+                    { id: 'section', label: 'Section' },
+                    { id: 'group', label: 'Group' },
+                    { id: 'type', label: 'Type of Schedule' },
+                    { id: 'date', label: 'Due Date' },
+                    { id: 'course', label: 'Course' },
+                    { id: 'message', label: 'Details' }
+                ];
+
+
+<div class="container">
+        <h1>Add to Schedule</h1>
+        <p style="text-align: center;">Crowdsourced Task Scheduler for UITS Program<br><br></p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="section">Section ?</label>
+                <select id="section" name="section" required>
+                    <option value="">-- Select a Subject --</option>
+                    <option value="all">All Section</option>
+                    <option value="A">Section A</option>
+                    <option value="B">Section B</option>
+                    <option value="C">Section C</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="group">Group ?</label>
+                <select id="group" name="group">
+                    <option value="">-- Select a Subject --</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="type">Group ?</label>
+                <select id="type" name="type" required>
+                    <option value="">-- Select a Subject --</option>
+                    <option value="notice">Notice</option>
+                    <option value="assignment">Assignment</option>
+                    <option value="labtest">Lab Test</option>
+                    <option value="viva">Viva</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="presentation">Presentation</option>
+                    <option value="ct">CT</option>
+                    <option value="mid">Mid Term</option>
+                    <option value="final">Final Term</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
+                <label for="section">Section ?</label>
+                <input type="text" id="section" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="group">Group ?</label>
+                <input type="text" id="group" name="name" required>
+            </div> -->
+
+            <!-- <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div> -->
+
+            <!-- <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone">
+            </div> -->
+
+            <label for="date">Due Date</label>
+            <div class="form-group">
+                <input type="date" id="date" name="date" requried>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course ?</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Select a Subject --</option>
+                    <option value="course-1">Demo Course 1</option>
+                    <option value="course-2">Demo Course 2</option>
+                    <option value="course-3">Demo Course 3</option>
+                    <option value="course-4">Demo Course 4</option>
+                    <option value="course-5">Demo Course 5</option>
+                    <option value="course-6">Demo Course 6</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Details?<br>(add Instructions/Syllabus/Topics)</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- <div class="form-group">
+                <label>Preferred Contact Method</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="contact-sms" name="contact-method" value="sms">
+                    <label for="contact-sms">SMS</label>
+                </div>
+            </div> -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="results-container" id="resultsContainer">
+        <div class="results-header">
+            <h1>Form Submission Results</h1>
+            <button class="back-btn" id="backButton">Back to Form</button>
+        </div>
+
+        <div class="results-content" id="resultsContent">
+            <!-- Results will be inserted here by JavaScript -->
+        </div>
+    </div>

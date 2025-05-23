@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form with Full Page Results</title>
+    <link rel="stylesheet" href="../css\buttons.css">
     <style>
         * {
             box-sizing: border-box;
@@ -83,6 +84,15 @@
             height: 18px;
         }
 
+        .button-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button-row button {
+            flex: 1;
+        }
+
         button {
             background-color: #4c9aff;
             color: white;
@@ -99,6 +109,14 @@
 
         button:hover {
             background-color: #3a8be2;
+        }
+
+        #viewDatasheetBtn {
+            background-color: #28a745;
+        }
+
+        #viewDatasheetBtn:hover {
+            background-color: #218838;
         }
 
         /* Results page styles */
@@ -122,45 +140,105 @@
             margin-bottom: 30px;
         }
 
-        .back-btn {
-            background-color: #f1f1f1;
-            color: #333;
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .back-btn,
+        .clear-btn {
             border: none;
             padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
             width: auto;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn {
+            background-color: #f1f1f1;
+            color: #333;
         }
 
         .back-btn:hover {
             background-color: #e0e0e0;
         }
 
+        .clear-btn {
+            background-color: #ff4757;
+            color: white;
+        }
+
+        .clear-btn:hover {
+            background-color: #ff3742;
+        }
+
         .results-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .result-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        .datasheet-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        .result-item:last-child {
+        .datasheet-table th,
+        .datasheet-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .datasheet-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #333;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 120px;
+            white-space: nowrap;
+        }
+
+        .datasheet-table td {
+            font-size: 14px;
+            color: #444;
+            word-break: break-word;
+            max-width: 200px;
+        }
+
+        .datasheet-table tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        .datasheet-table tr:hover {
+            background-color: #f0f7ff;
+        }
+
+        .datasheet-table tr:last-child th,
+        .datasheet-table tr:last-child td {
             border-bottom: none;
         }
 
-        .result-label {
+        .table-header {
+            background-color: #4c9aff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 0;
+            font-size: 18px;
             font-weight: 600;
-            color: #777;
-            margin-bottom: 5px;
         }
 
-        .result-value {
-            font-size: 18px;
-            color: #333;
+        .empty-value {
+            color: #999;
+            font-style: italic;
         }
 
         @media (max-width: 768px) {
@@ -176,10 +254,27 @@
 </head>
 
 <body>
+
     <div class="container">
-        <h1>Add to Schedule</h1>
-        <p style="text-align: center;">Crowdsourced Task Scheduler for UITS Program<br><br></p>
+        <!-- HOME BUTTON -->
+
+        <a href="../index.html" class="home-button">
+            <svg class="home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+
+
+        </a>
+
+        <!-- BACK BUTTON -->
+
+        <a href="javascript:history.back()" class="back-icon" style="box-sizing:content-box;">&#8592;</a>
+
+
+        <h1>Contact Information</h1>
         <form id="contactForm">
+
             <div class="form-group">
                 <label for="section">Section ?</label>
                 <select id="section" name="section" required>
@@ -190,7 +285,7 @@
                     <option value="C">Section C</option>
                 </select>
             </div>
-            
+
             <div class="form-group">
                 <label for="group">Group ?</label>
                 <select id="group" name="group">
@@ -218,27 +313,11 @@
                     <option value="final">Final Term</option>
                 </select>
             </div>
-            <!-- <div class="form-group">
-                <label for="section">Section ?</label>
-                <input type="text" id="section" name="name" required>
-            </div>
+
+
+
             <div class="form-group">
-                <label for="group">Group ?</label>
-                <input type="text" id="group" name="name" required>
-            </div> -->
-
-            <!-- <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div> -->
-
-            <!-- <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone">
-            </div> -->
-
-            <label for="date">Due Date</label>
-            <div class="form-group">
+                <label for="date">Due Date ?</label>
                 <input type="date" id="date" name="date" requried>
             </div>
 
@@ -260,34 +339,43 @@
                 <textarea id="message" name="message" required></textarea>
             </div>
 
-            <!-- <div class="form-group">
-                <label>Preferred Contact Method</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="contact-email" name="contact-method" value="email">
-                    <label for="contact-email">Email</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="contact-phone" name="contact-method" value="phone">
-                    <label for="contact-phone">Phone</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="contact-sms" name="contact-method" value="sms">
-                    <label for="contact-sms">SMS</label>
-                </div>
-            </div> -->
 
-            <button type="submit">Submit</button>
+            <div class="button-row">
+                <button type="submit">Submit</button>
+                <button type="button" id="viewDatasheetBtn">View Datasheet</button>
+            </div>
         </form>
     </div>
 
     <div class="results-container" id="resultsContainer">
         <div class="results-header">
             <h1>Form Submission Results</h1>
-            <button class="back-btn" id="backButton">Back to Form</button>
+            <div class="button-group">
+                <button class="clear-btn" id="clearButton">Clear Data</button>
+                <button class="back-btn" id="backButton">Back to Form</button>
+            </div>
         </div>
 
         <div class="results-content" id="resultsContent">
-            <!-- Results will be inserted here by JavaScript -->
+            <div class="table-header">Form Submission Data</div>
+            <table class="datasheet-table" id="datasheetTable">
+                <thead>
+                    <tr id="tableHeader">
+                        <th>No.</th>
+                        <th>Section</th>
+                        <th>Group</th>
+                        <th>Type</th>
+                        <th>Due Date</th>
+                        <th>Course</th>
+                        <th>Details</th>
+                        <!-- <th>Date</th>
+                        <th>Time</th> -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Results will be inserted here by JavaScript -->
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -295,74 +383,90 @@
         document.addEventListener('DOMContentLoaded', function () {
             const contactForm = document.getElementById('contactForm');
             const resultsContainer = document.getElementById('resultsContainer');
-            const resultsContent = document.getElementById('resultsContent');
+            const tableBody = document.getElementById('tableBody');
             const backButton = document.getElementById('backButton');
+            const clearButton = document.getElementById('clearButton');
+            const viewDatasheetBtn = document.getElementById('viewDatasheetBtn');
+
+            let submissionCount = 0;
 
             contactForm.addEventListener('submit', function (event) {
                 event.preventDefault();
 
-                // Clear previous results
-                resultsContent.innerHTML = '';
+                submissionCount++;
+
+                // Create a new row for this submission
+                const row = document.createElement('tr');
 
                 // Get form data
-                const formData = new FormData(contactForm);
+                const section = document.getElementById('section').value || 'Not provided';
+                const group = document.getElementById('group').value || 'Not provided';
+                const type = document.getElementById('type').value || 'Not provided';
+                const date = document.getElementById('date').value || 'Not provided';
+                const course = document.getElementById('course').value || 'Not selected';
+                const message = document.getElementById('message').value || 'Not provided';
 
-                // Create results display
-                const fields = [
-                    { id: 'section', label: 'Section' },
-                    { id: 'group', label: 'Group' },
-                    { id: 'type', label: 'Type of Schedule' },
-                    { id: 'date', label: 'Due Date' },
-                    { id: 'course', label: 'Course' },
-                    { id: 'message', label: 'Details' }
-                ];
-
-
-                // Process each field
-                fields.forEach(field => {
-                    const value = document.getElementById(field.id).value;
-                    if (value) {
-                        addResultItem(field.label, value);
-                    }
-                });
-
-                // Process checkboxes for contact methods
+                // Get selected contact methods
                 const contactMethods = [];
                 document.querySelectorAll('input[name="contact-method"]:checked').forEach(checkbox => {
-                    contactMethods.push(checkbox.value);
+                    contactMethods.push(checkbox.value.charAt(0).toUpperCase() + checkbox.value.slice(1));
+                });
+                const contactMethodsText = contactMethods.length > 0 ? contactMethods.join(', ') : 'None selected';
+
+                // Get current date and time
+                // const now = new Date();
+                // const date = now.toLocaleDateString();
+                // const time = now.toLocaleTimeString();
+
+                // Create table cells
+                const cells = [
+                    submissionCount,
+                    section,
+                    group,
+                    type,
+                    date,
+                    course,
+                    message
+                ];
+
+                cells.forEach(cellData => {
+                    const cell = document.createElement('td');
+                    if (cellData.toString().includes('Not provided') || cellData.toString().includes('Not selected') || cellData.toString().includes('None selected')) {
+                        cell.innerHTML = `<span class="empty-value">${cellData}</span>`;
+                    } else {
+                        cell.textContent = cellData;
+                    }
+                    row.appendChild(cell);
                 });
 
-                if (contactMethods.length > 0) {
-                    addResultItem('Preferred Contact Methods', contactMethods.join(', '));
-                }
+                // Add the row to the table
+                tableBody.appendChild(row);
+
+                // Clear the form
+                contactForm.reset();
 
                 // Show the results container
                 resultsContainer.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling of background
+                document.body.style.overflow = 'hidden';
+            });
+
+            viewDatasheetBtn.addEventListener('click', function () {
+                // Show the datasheet without adding new data
+                resultsContainer.style.display = 'block';
+                document.body.style.overflow = 'hidden';
             });
 
             backButton.addEventListener('click', function () {
                 resultsContainer.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
+                document.body.style.overflow = 'auto';
             });
 
-            // Helper function to add a result item
-            function addResultItem(label, value) {
-                const resultItem = document.createElement('div');
-                resultItem.className = 'result-item';
-
-                const resultLabel = document.createElement('div');
-                resultLabel.className = 'result-label';
-                resultLabel.textContent = label;
-
-                const resultValue = document.createElement('div');
-                resultValue.className = 'result-value';
-                resultValue.textContent = value;
-
-                resultItem.appendChild(resultLabel);
-                resultItem.appendChild(resultValue);
-                resultsContent.appendChild(resultItem);
-            }
+            clearButton.addEventListener('click', function () {
+                if (confirm('Are you sure you want to clear all submission data? This action cannot be undone.')) {
+                    tableBody.innerHTML = '';
+                    submissionCount = 0;
+                }
+            });
         });
     </script>
 </body>
