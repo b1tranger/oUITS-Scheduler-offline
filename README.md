@@ -3,4 +3,4 @@ offline version for WAD Lab project
 
 goals:
 - implement database
-- - host on firebase
+- host on firebase
